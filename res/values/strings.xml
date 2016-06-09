@@ -310,12 +310,12 @@
     <string name="title_activity_whatshot">Diagnosis Result</string>
     <string name="choosebody">Choose body part</string>
     <string name="contact">\n\nContacts</string>
-    <string name="mail">geriatrics_avi@gmail.com</string>
+    <string name="mail">support@healthcareelderly.me</string>
     <string name="title_activity_workshop_container">Disease Details</string>
     <string name="title_activity_enter_symptoms">EnterSymptoms</string>
     <string name="appsummary">This app is dedicated towards the health problems of elderly people.
         On the basis of symptoms one can diagnose himself and the app will predict the possible diseases that one can suffer.</string>
-    <string name="abhi">Kumar Abhishek(Mentor) \nAssistant Professor\nDepartment of CSE \nNIT Patna \nkumar.abhishek@nitp.ac.in</string>
+    <string name="abhi">Kumar Abhishek (Mentor) \nAssistant Professor\nDepartment of CSE \nNIT Patna \nkumar.abhishek@nitp.ac.in</string>
     <string name="avadh">Avadhesh singh \nFinal Year B.tech Student\nDepartment of CSE \nNIT Patna \navadheshsingh151@gmail.com</string>
     <string name="sunil">Sunil Gupta \nFinal Year B.tech Student\nDepartment of CSE \nNIT Patna \nsuneel.gupta0073@gmail.com</string>
     <string name="vivek">Vivek Raj \nFinal Year B.tech Student\nDepartment of CSE \nNIT Patna \nvivek1206058@gmail.com</string>

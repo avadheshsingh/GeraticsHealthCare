@@ -65,13 +65,16 @@ public class Diagnosis_Result extends Activity   {
 				public void onItemClick(AdapterView<?> parent, View view,
 						int position, long id) {
 					// TODO Auto-generated method stub
-				String item=resultlist.getItemAtPosition(position).toString();
-				StringTokenizer st = new StringTokenizer(item);
-				String itemdise=st.nextToken("*");
-				ShareData.data().Diseasename=itemdise.trim();
-				ShareData.data().source="web";
-				  new ExecuteTask().execute(getFormattedName(itemdise.trim(), " "));
+				try{
+						String item=resultlist.getItemAtPosition(position).toString();
+						StringTokenizer st = new StringTokenizer(item);
+						String itemdise=st.nextToken("*");
+						ShareData.data().Diseasename=itemdise.trim();
+						ShareData.data().source="web";
+						
+					    new ExecuteTask().execute(getFormattedName(itemdise.trim(), " "));
 				
+				}catch(Exception e){ Toast.makeText(getApplicationContext(), "Something is wrong. Try Again.", Toast.LENGTH_SHORT).show();}
 				}
 			});
     	      

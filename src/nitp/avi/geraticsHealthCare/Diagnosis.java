@@ -51,6 +51,11 @@ public class Diagnosis extends Fragment {
     String[] list;
     Button submit;
     String[] value ;
+    
+    // flag for Internet connection status
+    Boolean isInternetPresent = false; 
+    // Connection detector class
+    ConnectionDetector cd;
   
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,6 +73,13 @@ public class Diagnosis extends Fragment {
 	       text1.setThreshold(1);
 	       text1.setAdapter(adapter1);
 	        text1.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer()); 
+	        
+	        ///////////for checking internet connectivity status...../////
+	        cd = new ConnectionDetector(rootView.getContext());
+	        isInternetPresent = cd.isConnectingToInternet();
+	        if(! isInternetPresent){
+	        	Toast.makeText(rootView.getContext(),"Sorry..!!No internet connection.This feature will not work.",Toast.LENGTH_SHORT).show();
+	        }
 		 
 	      //submit button work///////////////////////////////////////
 	        submit.setOnClickListener(new OnClickListener() {
@@ -75,12 +87,15 @@ public class Diagnosis extends Fragment {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					  String delims = ",";
-					  String t=text1.getText().toString();
-					  StringTokenizer st = new StringTokenizer(t);  
-					  value = t.split(delims);					  
-					//Toast.makeText(rootView.getContext(), String.valueOf(value.length), Toast.LENGTH_SHORT).show();					
-					 new ExecuteTask().execute(t.trim());				      
+					try{
+						  String delims = ",";
+						  String t=text1.getText().toString();
+						  StringTokenizer st = new StringTokenizer(t);  
+						  value = t.split(delims);					  
+						//Toast.makeText(rootView.getContext(), String.valueOf(value.length), Toast.LENGTH_SHORT).show();					
+						 new ExecuteTask().execute(t.trim());
+				}catch(Exception e){ Toast.makeText(rootView.getContext(), "Something is wrong. Try Again.", Toast.LENGTH_SHORT).show();}
+				
 					
 				}
 			});

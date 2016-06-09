@@ -24,6 +24,11 @@ View rootView;
 ProgressBar progressBar;
 String site;
 
+//flag for Internet connection status
+Boolean isInternetPresent = false; 
+// Connection detector class
+ConnectionDetector cd;
+
 private Handler handler = new Handler(){
     @Override
     public void handleMessage(Message message) {
@@ -49,6 +54,14 @@ public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle shav
 	String name=ShareData.data().Diseasename;
 	webView = (WebView)rootView.findViewById(R.id.webView1);
 	progressBar=(ProgressBar) rootView.findViewById(R.id.progressBar);
+	
+///////////for checking internet connectivity status...../////
+      cd = new ConnectionDetector(rootView.getContext());
+      isInternetPresent = cd.isConnectingToInternet();
+      if(! isInternetPresent){
+      	Toast.makeText(rootView.getContext(),"Sorry..!!No internet connection.This feature will not work.",Toast.LENGTH_SHORT).show();
+      }
+	 
 	
 	webView.setWebViewClient(new MyBrowser());
 	webView.getSettings().setJavaScriptEnabled(true);
