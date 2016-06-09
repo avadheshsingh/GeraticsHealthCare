@@ -5,11 +5,5 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jena"/>
-	<classpathentry kind="lib" path="C:/Users/DELL/Documents/NetBeansProjects/apache-jena-3.0.1/arq-2.8.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DELL/Documents/NetBeansProjects/apache-jena-3.0.1/com.ibm.icu_3.4.4.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DELL/Documents/NetBeansProjects/apache-jena-3.0.1/concurrent-10.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DELL/Documents/NetBeansProjects/apache-jena-3.0.1/iri-0.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DELL/Documents/NetBeansProjects/apache-jena-3.0.1/jena.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

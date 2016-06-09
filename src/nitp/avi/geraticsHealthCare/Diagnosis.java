@@ -201,7 +201,7 @@ public String PostData(String[] valuse) {
 	try
 	{
 	HttpClient httpClient=new DefaultHttpClient();
-	HttpPost httpPost=new HttpPost(ShareData.data().hostAddress+"/GeriatricsWebApp/andiProcess");
+	HttpPost httpPost=new HttpPost(ShareData.data().hostAddress+"/GeriatricsWebApp/web/andiProcess.jsp");
 	
 	List<NameValuePair> list=new ArrayList<NameValuePair>();
 	list.add(new BasicNameValuePair("name", valuse[0]));

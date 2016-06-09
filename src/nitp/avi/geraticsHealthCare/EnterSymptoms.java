@@ -39,6 +39,7 @@ import android.widget.ListView;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.Toast;
 
+//this activity is not being used ......this is replaced by diagnosis.java
 
 public class EnterSymptoms extends Activity {
 	ImageButton speak;
@@ -208,7 +209,7 @@ public String PostData(String[] valuse) {
 	try
 	{
 	HttpClient httpClient=new DefaultHttpClient();
-	HttpPost httpPost=new HttpPost(ShareData.data().hostAddress+"/GeriatricsWebApp/andiProcess");
+	HttpPost httpPost=new HttpPost(ShareData.data().hostAddress+"/GeriatricsWebApp/andiProcess.jsp");
 	
 	List<NameValuePair> list=new ArrayList<NameValuePair>();
 	list.add(new BasicNameValuePair("name", valuse[0]));

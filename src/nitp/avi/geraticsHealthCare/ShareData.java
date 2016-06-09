@@ -20,6 +20,7 @@ public class ShareData {
 	    public String source;
 	    public String webSelectedDiseaseSymptom;
 	    public String webSelectedDiseaseDiagnosis;
-	    public String hostAddress="http://192.168.43.107:34593";
+	   // public String hostAddress="http://192.168.43.107:34593";
+	    public String hostAddress="http://107.170.112.190:8080";
 	}
 
